@@ -1,0 +1,41 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "client": "cd ./../client && npm install && npm run build && cp -r ./build/. ./../functions/public/. && cd ./../functions/",
+    "build": "npm run client"
+  },
+  "engines": {
+    "node": "12"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^5.7.2",
+    "body-parser": "^1.19.0",
+    "busboy": "^0.3.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.2.0",
+    "firebase-functions": "^3.11.0",
+    "fs": "0.0.1-security",
+    "mongodb": "^3.5.9",
+    "mongoose": "^5.9.25",
+    "os": "^0.1.1",
+    "path": "^0.12.7",
+    "uuid-v4": "^0.1.0",
+    "validator": "^13.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "firebase-functions-test": "^0.2.0"
+  }
+}
